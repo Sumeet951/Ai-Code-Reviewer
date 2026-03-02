@@ -16,7 +16,7 @@ def main():
     prompt=f"Review the following code changees and provide feedback:\n{diff}"
     response=client.models.generate_content(
         model="gemini-2.0-flash",
-        contents=prompt
+        contents=[prompt]
         
     )
     print("Code Review Feedback:")
