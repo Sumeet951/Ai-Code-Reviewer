@@ -1,7 +1,9 @@
+from dotenv import load_dotenv
 import subprocess
 from google import genai
 import os
 
+load_dotenv()
 
 def getDiff():
     diff=subprocess.check_output(["git","show"],text=True)
@@ -17,5 +19,5 @@ def main():
         contents=prompt
         
     )
-    print("Code Review Feedbacks:")
+    print("Code Review Feedback:")
     print(response.text)
