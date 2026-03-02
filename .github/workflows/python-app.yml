@@ -32,4 +32,6 @@ jobs:
           fi
 
       - name: Run review script
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: python ./scripts/review.py
