@@ -17,6 +17,5 @@ def main():
         contents=prompt
         
     )
-    print("Code Review Feedback:")
+    print("Code Review Feedbacks:")
     print(response.text)
-    
