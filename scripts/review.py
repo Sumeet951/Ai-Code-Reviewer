@@ -18,7 +18,7 @@ client=genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 print("GOOGLE_API_KEY loaded:", os.getenv("GOOGLE_API_KEY") is not None)
 def main():
     diff=getDiff()
-    prompt=f"Review the following code changees and provide feedback:\n{diff}"
+    prompt=f"Review the following code changes and provide feedback:\n\n Mandatory:provide the outpu in html that can use to send in mail \n\n{diff}"
     response=client.models.generate_content(
         model="gemini-3-flash-preview",
         contents=[prompt]
