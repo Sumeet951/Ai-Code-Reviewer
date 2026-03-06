@@ -6,7 +6,7 @@ import os
 
 # client = Mistral(api_key=os.environ.get("MISTRAL_API_KEY"))
 
-# load_dotenv()
+load_dotenv()
 
 def getDiff():
     diff=subprocess.check_output(["git","show"],text=True)
